@@ -1,9 +1,9 @@
-package com.panyukovnn.controller;
+package com.gorbunovav.otp.controller;
 
-import com.panyukovnn.dto.CheckOptDtoRequest;
-import com.panyukovnn.dto.OtpDtoRequest;
-import com.panyukovnn.dto.common.CommonRequest;
-import com.panyukovnn.dto.common.CommonResponse;
+import com.gorbunovav.otp.dto.CheckOtpRequest;
+import com.gorbunovav.otp.dto.OtpRequest;
+import com.gorbunovav.otp.dto.common.CommonRequest;
+import com.gorbunovav.otp.dto.common.CommonResponse;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,7 +22,7 @@ public class OtpController {
 
     @PostMapping("/generateAndSend")
     public CommonResponse<Void> generateAndSendOtp(
-        @RequestBody @Valid CommonRequest<OtpDtoRequest> request
+        @RequestBody @Valid CommonRequest<OtpRequest> request
     ) {
         otpService.generateAndSendOtp(request.getBody());
         request.getBody().getProcessId())
@@ -34,7 +34,7 @@ public class OtpController {
 
     @PostMapping("/check")
     public CommonResponse<Void> checkOtp(
-        @RequestBody @Valid CommonRequest<CheckOptDtoRequest> request
+        @RequestBody @Valid CommonRequest<CheckOtpRequest> request
     ) {
         otpService.checkOtp(request.getBody());
         request.getBody().getProcessId())

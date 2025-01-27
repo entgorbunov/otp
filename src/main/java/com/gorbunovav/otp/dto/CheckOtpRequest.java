@@ -1,4 +1,4 @@
-package com.panyukovnn.dto;
+package com.gorbunovav.otp.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CheckOptDtoRequest {
+public class CheckOtpRequest {
 
     @NotNull(message = "ProcessId не может быть пустым")
     private UUID processId;

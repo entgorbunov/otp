@@ -1,4 +1,4 @@
-package com.panyukovnn.dto.common;
+package com.gorbunovav.otp.dto.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

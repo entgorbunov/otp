@@ -1,4 +1,4 @@
-package com.panyukovnn.dto.common;
+package com.gorbunovav.otp.dto.common;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
