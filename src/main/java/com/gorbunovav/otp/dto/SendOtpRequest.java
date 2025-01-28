@@ -17,7 +17,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class OtpRequest {
+public class SendOtpRequest {
 
     @NotNull(message = "ProcessId не может быть пустым")
     private UUID processId;

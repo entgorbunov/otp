@@ -1,7 +1,7 @@
 package com.gorbunovav.otp.controller;
 
 import com.gorbunovav.otp.dto.CheckOtpRequest;
-import com.gorbunovav.otp.dto.OtpRequest;
+import com.gorbunovav.otp.dto.SendOtpRequest;
 import com.gorbunovav.otp.dto.common.CommonRequest;
 import com.gorbunovav.otp.dto.common.CommonResponse;
 import jakarta.validation.Valid;
@@ -22,7 +22,7 @@ public class OtpController {
 
     @PostMapping("/generateAndSend")
     public CommonResponse<Void> generateAndSendOtp(
-        @RequestBody @Valid CommonRequest<OtpRequest> request
+        @RequestBody @Valid CommonRequest<SendOtpRequest> request
     ) {
         otpService.generateAndSendOtp(request.getBody());
         request.getBody().getProcessId())
