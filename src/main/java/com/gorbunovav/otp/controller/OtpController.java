@@ -25,7 +25,7 @@ public class OtpController {
         @RequestBody @Valid CommonRequest<SendOtpRequest> request
     ) {
         otpService.generateAndSendOtp(request.getBody());
-        request.getBody().getProcessId())
+        request.getBody().getProcessId();
 
         return CommonResponse.<Void>builder()
             .id(UUID.randomUUID())
@@ -37,7 +37,7 @@ public class OtpController {
         @RequestBody @Valid CommonRequest<CheckOtpRequest> request
     ) {
         otpService.checkOtp(request.getBody());
-        request.getBody().getProcessId())
+        request.getBody().getProcessId();
 
         return CommonResponse.<Void>builder()
             .id(UUID.randomUUID())
