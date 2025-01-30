@@ -47,22 +47,4 @@ public class SendOtp extends AuditableEntity {
     public int hashCode() {
         return Objects.hashCode(id);
     }
-
-    @Override
-    public String toString() {
-        return "SendOtp{" +
-               "id=" + id +
-               ", processId='" + processId + '\'' +
-               ", telegramChatId='" + telegramChatId + '\'' +
-               ", message='" + message + '\'' +
-               ", length=" + length +
-               ", ttl=" + ttl +
-               ", resendAttempts=" + resendAttempts +
-               ", resendTimeout=" + resendTimeout +
-               ", salt='" + salt + '\'' +
-               ", sendMessageKey='" + sendMessageKey + '\'' +
-               ", status=" + status +
-               ", sendTime=" + sendTime +
-               '}';
-    }
 }

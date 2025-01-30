@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: "01.create_send_otp_table.yml"
+      id: "02.create_send_otp_table.yml"
       author: "Gorbunov AV"
       changes:
         - createTable:
@@ -25,7 +25,7 @@ databaseChangeLog:
                   remarks: "Идентификатор телеграм чата"
               - column:
                   name: message
-                  type: varchar(1000)
+                  type: varchar
                   remarks: "Текст сообщения"
               - column:
                   name: length
@@ -53,7 +53,7 @@ databaseChangeLog:
                   remarks: "Идентификатор сообщения"
               - column:
                   name: status
-                  type: varchar(20)
+                  type: varchar
                   remarks: "Статус отправки сообщения"
               - column:
                   name: send_time

@@ -35,15 +35,4 @@ public class CheckOtp extends AuditableEntity{
     public int hashCode() {
         return Objects.hashCode(id);
     }
-
-    @Override
-    public String toString() {
-        return "CheckOtp{" +
-               "id=" + id +
-               ", processId='" + processId + '\'' +
-               ", otp='" + otp + '\'' +
-               ", checkTime=" + checkTime +
-               ", correct=" + correct +
-               '}';
-    }
 }
